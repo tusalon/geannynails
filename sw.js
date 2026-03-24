@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Dary Nails spa
+// sw.js - Service Worker para Geanny Nail
 
-const CACHE_NAME = 'dary-nails-spa-v1';
+const CACHE_NAME = 'geanny-nail-v1';
 const urlsToCache = [
-  '/dary-nails-spa/',
-  '/dary-nails-spa/index.html',
-  '/dary-nails-spa/admin.html',
-  '/dary-nails-spa/admin-login.html',
-  '/dary-nails-spa/setup-wizard.html',
-  '/dary-nails-spa/editar-negocio.html',
-  '/dary-nails-spa/manifest.json',
-  '/dary-nails-spa/icons/icon-72x72.png',
-  '/dary-nails-spa/icons/icon-96x96.png',
-  '/dary-nails-spa/icons/icon-128x128.png',
-  '/dary-nails-spa/icons/icon-144x144.png',
-  '/dary-nails-spa/icons/icon-152x152.png',
-  '/dary-nails-spa/icons/icon-192x192.png',
-  '/dary-nails-spa/icons/icon-384x384.png',
-  '/dary-nails-spa/icons/icon-512x512.png'
+  '/geanny-nail/',
+  '/geanny-nail/index.html',
+  '/geanny-nail/admin.html',
+  '/geanny-nail/admin-login.html',
+  '/geanny-nail/setup-wizard.html',
+  '/geanny-nail/editar-negocio.html',
+  '/geanny-nail/manifest.json',
+  '/geanny-nail/icons/icon-72x72.png',
+  '/geanny-nail/icons/icon-96x96.png',
+  '/geanny-nail/icons/icon-128x128.png',
+  '/geanny-nail/icons/icon-144x144.png',
+  '/geanny-nail/icons/icon-152x152.png',
+  '/geanny-nail/icons/icon-192x192.png',
+  '/geanny-nail/icons/icon-384x384.png',
+  '/geanny-nail/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/dary-nails-spa/icons/icon-192x192.png');
+            return caches.match('/geanny-nail/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Dary Nails spa');
+console.log('✅ Service Worker configurado para Geanny Nail');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
