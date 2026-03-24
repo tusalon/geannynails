@@ -1,0 +1,22 @@
+{
+  "name": "Dary Nails spa",
+  "short_name": "Dary",
+  "description": "Uñas y belleza - Tu espacio de cuidado personal",
+  "start_url": "/dary-nails-spa/",
+  "scope": "/dary-nails-spa/",
+  "display": "standalone",
+  "background_color": "#ec4899",
+  "theme_color": "#ec4899",
+  "icons": [
+    {
+      "src": "/dary-nails-spa/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dary-nails-spa/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
