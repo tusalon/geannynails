@@ -1,22 +1,22 @@
 // sw.js - Service Worker para Geanny Nail
 
-const CACHE_NAME = 'geanny-nail-v1';
+const CACHE_NAME = 'geannynails-v1';
 const urlsToCache = [
-  '/geanny-nail/',
-  '/geanny-nail/index.html',
-  '/geanny-nail/admin.html',
-  '/geanny-nail/admin-login.html',
-  '/geanny-nail/setup-wizard.html',
-  '/geanny-nail/editar-negocio.html',
-  '/geanny-nail/manifest.json',
-  '/geanny-nail/icons/icon-72x72.png',
-  '/geanny-nail/icons/icon-96x96.png',
-  '/geanny-nail/icons/icon-128x128.png',
-  '/geanny-nail/icons/icon-144x144.png',
-  '/geanny-nail/icons/icon-152x152.png',
-  '/geanny-nail/icons/icon-192x192.png',
-  '/geanny-nail/icons/icon-384x384.png',
-  '/geanny-nail/icons/icon-512x512.png'
+  '/geannynails/',
+  '/geannynails/index.html',
+  '/geannynails/admin.html',
+  '/geannynails/admin-login.html',
+  '/geannynails/setup-wizard.html',
+  '/geannynails/editar-negocio.html',
+  '/geannynails/manifest.json',
+  '/geannynails/icons/icon-72x72.png',
+  '/geannynails/icons/icon-96x96.png',
+  '/geannynails/icons/icon-128x128.png',
+  '/geannynails/icons/icon-144x144.png',
+  '/geannynails/icons/icon-152x152.png',
+  '/geannynails/icons/icon-192x192.png',
+  '/geannynails/icons/icon-384x384.png',
+  '/geannynails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/geanny-nail/icons/icon-192x192.png');
+            return caches.match('/geannynails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
